@@ -14,7 +14,8 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
 ```
 
 ... or start with explicit volume so you can manage it and attach to another container for upgrades.  This will automatically create a 'jenkins_home' volume on docker host, that will survive container stop/restart/deletion.  When you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents.  If your volume is inside a container - you can use
-``` docker cp $CONTAINERID:/var/jenkins_home TARGETDIRECTORY
+``` 
+docker cp $CONTAINERID:/var/jenkins_home TARGETDIRECTORY
 ```
 command to extract the data for backups on the host machine,  Treat it like a database.
 
