@@ -7,22 +7,21 @@
 docker pull jenkins/jenkins
 ```
 
-The folowing will start and store the workspace in /var/jenkins_home. All Jenkins data lives in there - including plugins and configuration... 
+The folowing will start and store the workspace in /var/jenkins_home. All Jenkins data lives in there - including plugins and configuration... we are using an explicit volume so you can manage it and attach to another container for upgrades.  This will automatically create a 'jenkins_home' volume on docker host, that will survive container stop/restart/deletion.  When you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents. 
+```
+docker run --name local_jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
 ```
-docker run --name myjenkinscontainer -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
-
-```
-
-... or start with explicit volume so you can manage it and attach to another container for upgrades.  This will automatically create a 'jenkins_home' volume on docker host, that will survive container stop/restart/deletion.  When you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents.  If your volume is inside a container - you can use
+When you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents.  If your volume is inside a container as created above you can use this to back it up on your host machine.
 ``` 
 docker cp $CONTAINERID:/var/jenkins_home TARGETDIRECTORY
 ```
-command to extract the data for backups on the host machine,  Treat it like a database.
+command to extract the data for backups on the host machine,  Treat it like a database.  To restore, just do the reverse, but make sure the target is /var/, not /var/jenkins_home
 
 ```
-docker run --name myjenkinscontainer -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+docker run --name local_jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
+docker volume ls
 ```
 
 ...or, if you want a terminal interface (to fetch the password)
@@ -33,7 +32,7 @@ docker run -itp 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenki
 
 Then goto http://localhost:8080
 
-Each of the commands above will create a new container... you want to create a container  once, then use:
+Each of the commands above will create a new container... you want to create a container once, then use:
 ```
 docker start CONTAINERID 
 ```
