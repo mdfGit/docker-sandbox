@@ -1,0 +1,70 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.19">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>mrjanitor</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.9">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+  </actions>
+  <queueId>3</queueId>
+  <timestamp>1523742032064</timestamp>
+  <startTime>1523742032074</startTime>
+  <result>SUCCESS</result>
+  <duration>292</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>node {
+   def mvnHome
+   stage(&apos;Preparation&apos;) { // for display purposes
+    echo(&apos;hello prep&apos;)
+   }
+   stage(&apos;Build&apos;) {
+    echo(&apos;hello build&apos;)
+   }
+   stage(&apos;Results&apos;) {
+    echo(&apos;hello done&apos;)
+   }
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>69406000</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>18710900</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>231697800</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>33448700</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>17449900</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>22</iota>
+    <head>1:22</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

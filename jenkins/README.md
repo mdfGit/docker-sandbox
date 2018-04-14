@@ -7,7 +7,7 @@
 docker pull jenkins/jenkins
 ```
 
-The folowing will start and store the workspace in /var/jenkins_home. All Jenkins data lives in there - including plugins and configuration... we are using an explicit volume so you can manage it and attach to another container for upgrades.  This will automatically create a 'jenkins_home' volume on docker host, that will survive container stop/restart/deletion.  When you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents. 
+The following will start and store the workspace in /var/jenkins_home. All Jenkins data lives in there - including plugins and configuration... we are using an explicit volume so you can manage it and attach to another container for upgrades.  This will automatically create a 'jenkins_home' volume on docker host, that will survive container stop/restart/deletion.  When you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents. 
 ```
 docker run --name local_jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
@@ -16,7 +16,7 @@ When you use a volume, a new directory is created within Docker’s storage dire
 ``` 
 docker cp $CONTAINERID:/var/jenkins_home TARGETDIRECTORY
 ```
-command to extract the data for backups on the host machine,  Treat it like a database.  To restore, just do the reverse, but make sure the target is /var/, not /var/jenkins_home
+Treat this directory like a database.  To restore, just do the reverse, but make sure the target is /var/, not /var/jenkins_home
 
 ```
 docker run --name local_jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts

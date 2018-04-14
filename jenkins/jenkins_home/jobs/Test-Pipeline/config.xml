@@ -1,0 +1,24 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.19">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.48">
+    <script>node {
+   def mvnHome
+   stage(&apos;Preparation&apos;) { // for display purposes
+    echo(&apos;hello prep&apos;)
+   }
+   stage(&apos;Build&apos;) {
+    echo(&apos;hello build&apos;)
+   }
+   stage(&apos;Results&apos;) {
+    echo(&apos;hello done&apos;)
+   }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
