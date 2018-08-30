@@ -1,0 +1,795 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"EFS",
+				"EFSSubnet3"
+			],
+			[
+				"RDS",
+				"RDSDisplay"
+			],
+			[
+				"ProductC",
+				"ProductS3Bucket"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "instance/modules/instance-build.sh",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "instance/modules/env_specific.sh",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "instance/env_specific.sh",
+			"settings":
+			{
+				"buffer_size": 1485,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "[root@97165d9b2b0b instance]# ./instance-build.sh \nStarting ./instance-build.sh at Mon Apr 30 18:02:00 UTC 2018\nPROVISIONING MODE\nib_seed\nSetting ENV=sand\nib_init\nsource_params.sh script started execution\nsource defaults.sh\ndefaults.sh ib_defaults SPLUNK INDEX: cloud-huit-dms-dev\nENV_SPECIFIC.sh SETTING SPLUNK_INDEX: cloud-huit-dms-sand\nsource_params.sh script completed successfully\nib_defaults\nyum_utils_packages.sh ib_defaults SPLUNK INDEX: cloud-huit-dms-sand\nib_defaults\nhcdo_splunk.sh ib_defaults SPLUNK INDEX: cloud-huit-dms-sand\nib_init\nsource_params.sh script started execution\nsource defaults.sh\ndefaults.sh ib_defaults SPLUNK INDEX: cloud-huit-dms-dev\nENV_SPECIFIC.sh SETTING SPLUNK_INDEX: cloud-huit-dms-sand\nsource_params.sh script completed successfully\nib_init\nyum_utils_packages.sh started execution\nyum_utils_packages.sh ib_init SPLUNK INDEX: cloud-huit-dms-sand\nLoaded plugins: fastestmirror, ovl\nLoading mirror speeds from cached hostfile\n * base: centos.eecs.wsu.edu\n * extras: centos.mirror.constant.com\n * updates: centos.mirror.constant.com\nPackage git-1.8.3.1-12.el7_4.x86_64 already installed and latest version\nPackage ntp-4.2.6p5-25.el7.centos.2.x86_64 already installed and latest version\nPackage tmux-1.8-4.el7.x86_64 already installed and latest version\nPackage unzip-6.0-16.el7.x86_64 already installed and latest version\nPackage wget-1.14-15.el7_4.1.x86_64 already installed and latest version\nPackage 1:telnet-0.17-64.el7.x86_64 already installed and latest version\nNothing to do\nyum_utils_packages.sh completed successfully\nib_init\nhcdo_splunk.sh script started execution\nib_init SPLUNK INDEX: cloud-huit-dms-sand\nHCDO_SPLUNK_ROLE: hcdo-ansible-role-splunk\nhcdo_splunk.sh completed successfully\n./instance-build.sh done at Mon Apr 30 18:02:00 UTC 2018",
+			"settings":
+			{
+				"buffer_size": 1787,
+				"line_ending": "Unix",
+				"name": "[root@97165d9b2b0b instance]# ./instance-build.sh"
+			}
+		},
+		{
+			"file": "instance/instance-build.sh",
+			"settings":
+			{
+				"buffer_size": 1924,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#!/usr/bin/env bash\n\nSPLUNK_INDEX='cloud-huit-dms-dev'\nHCDO_SPLUNK_ROLE='hcdo-ansible-role-splunk'\nSPLUNK_CONF_DIR='/opt/splunkforwarder/etc/system/local'\nSPLUNK_APP_NAME=\"${APP}-${TIER}-${ENV}\"\n\nHOST=$( uname -n )\necho \"defaults.sh ib_defaults SPLUNK INDEX: ${SPLUNK_INDEX}\"	\n\nSPLUNK_INDEXER=\"splunk-s3-1-60ox.noc.harvard.edu\"\nSPLUNK_PORT=\"50514\"\nSPLUNK_MONITORS=(\n'/var/log'\n)\nLEGACY_MONITORS=(\n)\n\n",
+			"file": "instance/modules/bootstrap/defaults.sh",
+			"file_size": 400,
+			"file_write_time": 1525120068000000,
+			"settings":
+			{
+				"buffer_size": 400,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "instance/modules/bootstrap/source_params.sh",
+			"settings":
+			{
+				"buffer_size": 2201,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "instance/modules/core/hcdo_splunk.sh",
+			"settings":
+			{
+				"buffer_size": 726,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/dms-infra-dwhr/dwhr.sublime-project",
+			"settings":
+			{
+				"buffer_size": 144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "instance/modules/utils/yum_utils_packages.sh",
+			"settings":
+			{
+				"buffer_size": 470,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/oracle/oracle_install.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/dwhr_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/dwcen_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/cloudformation/README.md",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/test/dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/hf2-new.sublime-workspace",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/hf2-new.sublime-project",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/README.md",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/int/tier_db_pre_dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/tier_db_pre_dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/int/tier_db_pre_dwcen_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/int/dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/int/dwcen_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/tier_db_pre_dwcen_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/sand/dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/sand/dwcen_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/test/tier_db_pre_dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/test/dwhr_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/test/tier_db_pre_dwcen_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/test/dwcen_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/core/hcdo_splunk.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/test/dwcen_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/sand/dwhr_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/sand/dwcen_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/dwcen_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/int/dwcen_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/cloudformation/tier_db.yml",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/cloudformation/parent.yml",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/cloudformation/ec2_auto_recovery_cw_alarm.yml",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/int/dwhr_ec2_auto_recovery_cw_alarm_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/cloudformation/ec2-auto-recovery-cw-alarm.yml",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/cloudformation/tier_db_pre.yml",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/fetchandmerge.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/sand/tier_db_pre_dwhr_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/utils/attach_mount_drives.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/instance-build.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/env_specific.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/bootstrap/lib.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/bootstrap/source_params.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/oracle/oracle_oem_agent.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/oracle/oracle_base.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/oracle/oracle_dbprotect_agent.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/instance/modules/oracle/oracle_maestro_client.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/s3_sync_dev.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/s3_sync_sand.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/s3_sync_test.sh",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/cloudformation/tier_compute.yml",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/sand/parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/sand/tier_db_pre_parameters.json",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/deploy/app/codedeploy-hooks.sh",
+		"/Users/maf058/Downloads/garb/deploy.now",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-applications-dms-hdw-maf058/dev/db_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/train/kms_ami_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/prod/elb_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/train/rds_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/prod/asglc_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/core/hcdo_splunk.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/README.md",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/int/rds_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/parent.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/int/elb_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/sand/asglc_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/asglc_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/elb_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/rds_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/asglc_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/elb_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/rds_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/int/asglc_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/train/parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/sand/parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/parameters.json.pwd",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/sand/parameters.json.pwd",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/kms.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/train/parameters.json.pwd",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/parameters.json.pwd",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/env_specific.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/train/asglc_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/supplemental/namedAccounts.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/prod/rds_cw_cf_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/elb_cw_cf.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/db_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/tier_compute.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/sand/kms_ami_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/app_sg.yml",
+		"/Users/maf058/Downloads/instance-build-messages.txt",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/prod/parameters.json.pwd",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/prod/parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/app_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/int/app_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/prod/app_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/instance-build.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/s3_sync_prod.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/int/parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/int/parameters.json.pwd",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/prod/kms_ami_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/test/kms_ami_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/rds_cw_cf.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/tier_db.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/s3_sync.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/bootstrap/source_params.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/core/lift_and_shift.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/supplemental/nessus.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/supplemental/ansibletower.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/int/kms_ami_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/kms_ami_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/deprecated_finalconfiguration/test",
+		"/Users/maf058/Documents/_code/repos/bitbucket/maf058/forks/maf058/hcdo-migration-aws-instancebuild-sh-maf058/modules/supplemental/route53.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/tier_efs.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/supplemental/hcdo_efs_mount.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/instance/modules/core/tag_volumes.sh",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/db_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/web_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/.gitignore",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/cloudformation/db_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/elb.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/ASG_LC.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/dev/cloudformation/app_sg.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/global_outputs.yml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/sand/cloudformation/efs_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/sand/cloudformation/elb_parameters.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/sand/cloudformation/sg_stack.yaml",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/kms.json",
+		"/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/atsea-bipublisher/cloudformation/efs.yml"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"defaults.sh ib_defaults SPLUNK INDEX: cloud-huit-dms-dev",
+			"cloud-huit-dms-sand",
+			"defaults.sh ib_defaults SPLUNK INDEX:",
+			"10.2.",
+			"loadbalancerpub",
+			"route",
+			"ssl",
+			"cert",
+			"InstancesConfig",
+			"InstancesConfigIndexes",
+			"Instance03InstanceType",
+			"GetAtt",
+			"Fn::GetAtt",
+			"Fn::GetAtt LoadBalancer",
+			"LoadBalancer ",
+			"LoadBalancer",
+			"WebTier",
+			"AppTier",
+			"CustomsecurityGroup",
+			"securityGroupCus",
+			"securityGroup",
+			"LoadBalancerPubliclyAccessible",
+			"10.1.162.0/24",
+			"Key",
+			"sample_product_tier_name",
+			"AccessLogsS3BucketPrefix",
+			"ListenersConfig",
+			"ElbListener",
+			"ElbListener02",
+			"InstancesConfig",
+			"pass",
+			"Instance01",
+			"Instances01",
+			"InstancesConfig",
+			"Instance01",
+			"Instance04",
+			"MiscIndexesMap",
+			"Instance01Subnet",
+			"InstancesConfigIndexes",
+			"ElbSecurityGroupBase",
+			"	",
+			"tcp	any	128.103.95.80	80\ntcp	10.1.162.0/24	128.103.95.80	*\ntcp	128.103.109.12	128.103.95.80	3306\ntcp	10.11.22.0/24	128.103.95.0/24	*\ntcp	10.34.5.240	128.103.95.0/24	135\ntcp	10.34.5.240	128.103.95.0/24	139\ntcp	10.34.5.240	128.103.95.0/24	1024 5000\ntcp	10.34.5.240	128.103.95.0/24	49152 65535\nudp	10.34.5.240	128.103.95.0/24	137 138\ntcp	10.35.2.65	128.103.95.0/24	1025 5000\ntcp	10.35.2.65	128.103.95.0/24	80\ntcp	10.35.2.65	128.103.95.0/24	135\ntcp	10.35.2.65	128.103.95.0/24	445\ntcp	10.35.2.65	128.103.95.0/24	8000 8999\ntcp	10.35.2.65	128.103.95.0/24	49152 65535\ntcp	10.240.128.200	128.103.95.0/24	*\nip	10.255.7.122	128.103.95.0/24	*\nip	10.255.7.100	128.103.95.0/24	*\ntcp	10.34.3.0/25	 128.103.95.0/24	22\ntcp	10.34.3.0/25	 128.103.95.0/24	3389\nip	10.34.5.120/29	 128.103.95.0/24	*\ntcp	10.35.2.33	 128.103.95.0/24	3389\ntcp	10.35.2.33	 128.103.95.0/24	8000 8999\nip	10.11.26.0/24	 128.103.95.0/24	*\nip	10.11.134.0/24	 128.103.95.0/24	*\ntcp	10.34.9.0/26	 128.103.95.0/24	10000 30001\nudp	10.34.9.0/26	 128.103.95.0/24	10000 30001\ntcp	10.34.5.42	 128.103.95.0/24	22\ntcp	10.34.5.42	 128.103.95.0/24	139\ntcp	10.34.5.42	 128.103.95.0/24	1433\ntcp	10.34.5.42	 128.103.95.0/24	8000 9999\ntcp	10.34.5.52	 128.103.95.0/24	22\ntcp	10.34.5.52	 128.103.95.0/24	8000 9999\ntcp	10.34.5.52	 128.103.95.0/24	1433\ntcp	10.34.5.56	 128.103.95.0/24	135\ntcp	10.34.5.56	 128.103.95.0/24	137\ntcp	10.34.5.76	 128.103.95.0/24	135\ntcp	10.34.5.76	 128.103.95.0/24	4155\ntcp	10.34.5.76	 128.103.95.0/24	5120\ntcp	10.34.1.5	 128.103.95.0/24	139\ntcp	10.34.1.5	 128.103.95.0/24	443\ntcp	10.34.1.5	 128.103.95.0/24	445\ntcp	10.34.1.5	 128.103.95.0/24	902\ntcp	10.34.1.5	 128.103.95.0/24	9089\nudp	10.34.1.5	 128.103.95.0/24	137 138\ntcp	10.34.1.30	 128.103.95.0/24	139\ntcp	10.34.1.30	 128.103.95.0/24	443\ntcp	10.34.1.30	 128.103.95.0/24	445\ntcp	10.34.1.30	 128.103.95.0/24	902\ntcp	10.34.1.30	 128.103.95.0/24	9089\nudp	10.34.1.30	 128.103.95.0/24	137 138\n	",
+			"	",
+			" ",
+			"tcp",
+			"source ",
+			"source instance",
+			"source instance-build",
+			"source ",
+			"source",
+			"get_tag",
+			"get_tag()",
+			"ami-e84d4492",
+			"output.",
+			"Applicat",
+			"ProductDomain",
+			"Doma",
+			"iop",
+			"firewall",
+			"iptable",
+			"subn",
+			"enablerepo",
+			"satellite",
+			"ApplicationName",
+			"SnsEmailList",
+			"select",
+			"SnsEmailCount",
+			"SnsEmailList",
+			"email",
+			"Sns",
+			"SnsEmailList",
+			"sns",
+			"AutoRecoverySnsTopic",
+			"SnsEmailList",
+			"AutoRecoverySnsTopic",
+			"HDWAutoRecoverySnsTopic",
+			"Sta",
+			"ShortEnvironment",
+			"ProductEnvironment",
+			"ProductEnvironmentShort",
+			"cfn_bootstrap.sh",
+			"profile",
+			"ProductEnvironment",
+			"kms",
+			"pass",
+			"firewalld",
+			"firewall",
+			"ip",
+			"iptable",
+			"16b",
+			"dwcen",
+			"dwhr",
+			"test",
+			"dwcen",
+			"fstab",
+			"option",
+			"5500",
+			"ProductNameForS3Bucket",
+			"compl",
+			"/tmp/oemexec.log",
+			"sns",
+			"yum",
+			"AvailabilityZone",
+			"ShortEnvironment",
+			"VpnTunnels",
+			"DeletionPolicy",
+			"AWS::",
+			"Platform",
+			"ProductEnvironmentShort",
+			"/dev/xvdg",
+			"/dev/xvdg:::/u05",
+			"unzip",
+			"dms_stack",
+			"ProductEnvironmentShort",
+			"mount_devices",
+			"DMSStack",
+			"DbTierAdditionalVolumeThree",
+			"findinmap",
+			"!or",
+			"TIER",
+			"tier",
+			"Type:",
+			"condition",
+			"depends",
+			"depen",
+			"MOUNT_DEVICES",
+			"!Ref Type",
+			"Type"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"dwhr",
+			"dwcen",
+			"sand",
+			"dwhr",
+			"VolumeType",
+			"osa_table",
+			"EFSAppTierEnabledFlag",
+			"ProductEnvironment",
+			"ProductName",
+			"ProductContext",
+			"ProductAssetId",
+			"ProductEnvironment",
+			"ProductName",
+			"ProductContext",
+			"ProductName",
+			"ProductEnvironment",
+			"bipsandappsg",
+			"bipsandelbPrivatesg",
+			"bipsandappsg",
+			"bipsanddbsg",
+			"bipdevelbPrivatesg",
+			"BIPublisher",
+			"sand",
+			"Sand"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "instance/modules/instance-build.sh",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "instance/modules/env_specific.sh",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "instance/env_specific.sh",
+					"settings":
+					{
+						"buffer_size": 1485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								446,
+								446
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 14.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 1787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[root@97165d9b2b0b instance]# ./instance-build.sh",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "instance/instance-build.sh",
+					"settings":
+					{
+						"buffer_size": 1924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 112.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "instance/modules/bootstrap/defaults.sh",
+					"settings":
+					{
+						"buffer_size": 400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								277,
+								277
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "instance/modules/bootstrap/source_params.sh",
+					"settings":
+					{
+						"buffer_size": 2201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2002,
+								2002
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1345.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "instance/modules/core/hcdo_splunk.sh",
+					"settings":
+					{
+						"buffer_size": 726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/maf058/Documents/_code/repos/github/github-enterprise-maf058/forks/dms-infra-dwhr/dwhr.sublime-project",
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "instance/modules/utils/yum_utils_packages.sh",
+					"settings":
+					{
+						"buffer_size": 470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.540891437861,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true
+}

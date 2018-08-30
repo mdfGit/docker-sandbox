@@ -8,3 +8,7 @@ LABEL org.label-schema.schema-version = "1.0" \
     org.label-schema.build-date="20180402"
 
 CMD ["/bin/bash"]
+
+# RUN yum -y update
+# RUN yum -y install gcc
+# RUN yum -y install wget
